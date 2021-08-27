@@ -159,7 +159,14 @@ bar {
 }
 
 # My new configs
-default_border pixel
+#default_border pixel
+# Enable gaps
+for_window [class=".*"] border pixel 3
+# Gaps settings
+gaps inner 10
+gaps outer 10
+smart_gaps on
+
 
 exec --no-startup-id /usr/bin/feh --bg-scale /home/majson/.config/wallpaper/current.jpg
 exec --no-startup-id compton

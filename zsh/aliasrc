@@ -1,7 +1,7 @@
 # Contains aliases for zsh
 
 # Basic ls stuff
-alias ls="ls --color=tty"
+alias ls="ls --color=auto --group-directories-first"
 alias l="ls"
 alias ll="ls -l"
 alias la="ls -la"
