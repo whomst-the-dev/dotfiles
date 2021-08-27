@@ -1,0 +1,12 @@
+dconf/
+enchant/
+evolution/
+gedit/
+gnome-initial-setup-done
+gtk-3.0/
+hub
+ibus/
+pulse/
+user-dirs.dirs
+user-dirs.locale
+

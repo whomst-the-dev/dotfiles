@@ -1,0 +1,16 @@
+# Contains aliases for zsh
+
+# Basic ls stuff
+alias ls="ls --color=tty"
+alias l="ls"
+alias ll="ls -l"
+alias la="ls -la"
+
+# Editing rcs
+alias zrc="vim ~/.config/zsh/.zshrc"
+alias vrc="vim ~/.config/nvim/.vimrc"
+
+# Update Upgrade
+sup(){
+        sudo apt update && sudo apt upgrade
+}
