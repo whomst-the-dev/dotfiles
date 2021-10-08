@@ -1,0 +1,1 @@
+/bin/printf '\u2014\u2500\u2502\u250C' >> .config/zsh/zshrc

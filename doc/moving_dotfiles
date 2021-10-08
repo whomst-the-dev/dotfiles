@@ -1,0 +1,4 @@
+moved ~/.zshrc to .config/zsh/.zshrc
+created ~/.zshenv
+containing:
+export ZDOTDIR="$HOME/.config/zsh"

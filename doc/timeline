@@ -1,0 +1,77 @@
+install i3
+	Todo
+install neovim
+	sudo apt install neovim
+install termite
+	git clone https://github.com/ls4154/termite-ubuntu.git
+install termite-style
+	git clone https://github.com/adi1090x/termite-style.git
+	font spacing can be fixed in the termite config (UbuntuMono 13)
+install zsh
+	sudo apt install zsh
+	chsh -s $(which zsh)
+	kill -9 -1 (relog)
+	copy the .zsh from luke
+	add .config/shell/aliasrc
+install neomutt
+	sudo apt install neomutt
+set Caps_Lock to Escape
+	see ~/.Xmodmap
+added ~/.config/nvim/.vimrc
+	and added to ~/.zshenv
+	export VIMINIT="source $HOME/.config/nvim/.vimrc"
+install feh and compton for wallpapers
+	sudo apt install feh
+	added to ~/.config/i3/config
+	exec --no-startup-id /usr/bin/feh --bg-fill ~/.config/wallpaper/wall.jpg
+	sudo apt install compton
+	added to ~/.config/i3/config
+	exec --no-startup-id compton
+	created ~/.config/compton.conf and added
+	opacity-rule = ["85:class_g = 'Termite'"];
+added a symbolic link between
+    ~/.config/zsh/.zshenv ~/.zshenv
+install mullvad
+    Does not match architecture for rpi :(
+setup github repo
+    sudo apt install hub (for creating github repositories from terminal)
+    git config --global user.email "<email>"
+    git config --global user.name "<name>"
+    git config --global core.editor "vim"
+    git config --global init.defaultBranch master
+    git config pull.rebase false
+    eval "$(ssh-agent -s)"
+        alt. exec ssh-agent zsh
+    ssh-add ~/.ssh/id_rsa
+    Add id_rsa.pub to the github account
+    Authenticate keys
+    ssh -T git@github.com
+    Navigate to dir
+    git init
+    Generate a personalized token on Github
+    hub create
+    Enter username and token
+    git remote add origin git@github.com:<username>/<repo-name>.git
+    git add .
+    git commit
+    git push -u origin master
+replace i3 with i3-gaps
+    sudo apt purge i3
+    sudo apt autoremove
+    sudo add-apt-repository ppa:regolith-linux/release
+    sudo apt update
+    sudo apt install i3-gaps
+    Relog
+    Add to ~/.config/i3/config
+    #default_border pixel
+    for_window [class=".*"] border pixel 3
+    gaps inner 10
+    gaps outer 10
+    smart_gaps on
+    Then back in the shell
+    i3-msg reload
+reset theme to default (Adwaita)
+    gsettings set org.gnome.desktop.interface gtk-theme "Adwaita"
+    gsettings set org.gnome.desktop.wm.preferences theme "Adwaita"
+uninstalled termite-style with its uninstall-script
+
